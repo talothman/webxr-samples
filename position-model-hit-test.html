@@ -48,7 +48,7 @@
       arObject.visible = false;
       scene.addNode(arObject);
 
-      let flower = new Gltf2Node({url: 'media/gltf/sunflower/sunflower.gltf'});
+      let flower = new Gltf2Node({url: 'media/glb/space_filling.glb'});
       arObject.addNode(flower);
 
       let reticle = new Gltf2Node({url: 'media/gltf/reticle/reticle.gltf'});
@@ -61,7 +61,7 @@
       vec3.set(shadow.scale, 0.15, 0.15, 0.15);
       arObject.addNode(shadow);
 
-      const MAX_FLOWERS = 30;
+      const MAX_FLOWERS = 1;
       let flowers = [];
 
       // Ensure the background is transparent for AR.
@@ -197,6 +197,7 @@
       // Start the XR application.
       initXR();
     </script>
-    <model-viewer src="media/gltf/sunflower/sunflower.gltf" alt="A 3D model of an astronaut" auto-rotate camera-controls></model-viewer>
+    
+    <model-viewer src="media/glb/space_filling.glb" alt="A 3D model of an astronaut" auto-rotate camera-controls></model-viewer>
   </body>
 </html>
